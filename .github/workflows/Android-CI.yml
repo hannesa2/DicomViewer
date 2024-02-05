@@ -84,7 +84,7 @@ jobs:
   #          name: LiveEdgeDetection-logcat
   #          path: artifacts/logcat.log
   #      - name: Archive screenshots
-  #        uses: actions/upload-artifact@v3
+  #        uses: actions/upload-artifact@v4
   #        with:
   #          name: LiveEdgeDetection-Screenshots
   #          path: screenshots/adb
@@ -106,7 +106,7 @@ jobs:
       - name: Code checks
         run: ./gradlew check
       - name: Archive Lint report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         if: ${{ always() }}
         with:
           name: DICOM-Lint-report
